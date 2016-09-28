@@ -1,0 +1,7 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "news-webpart-react",
+    "libraryId": "ccb8ac89-2194-4361-b91a-e5ec3399f640",
+    "framework": "react"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "news-webpart-react-client-side-solution",
+    "id": "ccb8ac89-2194-4361-b91a-e5ec3399f640",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/news-webpart-react.spapp"
+  }
+}
