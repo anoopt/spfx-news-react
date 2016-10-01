@@ -24,7 +24,10 @@ export default class NewsitemsWebPart extends BaseClientSideWebPart<INewsitemsWe
       numberOfItems: this.properties.numberOfItems,
       httpClient: this.context.httpClient,
       title: this.properties.title,
-      siteUrl: this.context.pageContext.web.absoluteUrl
+      siteUrl: this.context.pageContext.web.absoluteUrl,
+      listName: this.properties.listName,
+      environmentType: this.context.environment.type,
+      serviceScope: this.context.serviceScope
     });
 
     ReactDom.render(element, this.domElement);
@@ -46,6 +49,9 @@ export default class NewsitemsWebPart extends BaseClientSideWebPart<INewsitemsWe
                 }),
                 PropertyPaneTextField('title', {
                   label: strings.TitleFieldLabel
+                }),
+                PropertyPaneTextField('listName', {
+                  label: strings.LsitNameFieldLabel
                 }),
                 PropertyPaneSlider('numberOfItems', {
                   label: strings.NumberOfItemsFieldLabel,

@@ -4,6 +4,7 @@ declare interface INewsitemsStrings {
   DescriptionFieldLabel: string;
   NumberOfItemsFieldLabel: string;
   TitleFieldLabel: string;
+  LsitNameFieldLabel: string;
 }
 
 declare module 'newsitemsStrings' {
