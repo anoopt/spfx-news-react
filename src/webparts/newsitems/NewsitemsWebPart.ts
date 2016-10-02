@@ -20,7 +20,6 @@ export default class NewsitemsWebPart extends BaseClientSideWebPart<INewsitemsWe
 
   public render(): void {
     const element: React.ReactElement<INewsitemsProps> = React.createElement(Newsitems, {
-      description: this.properties.description,
       numberOfItems: this.properties.numberOfItems,
       httpClient: this.context.httpClient,
       title: this.properties.title,
@@ -38,18 +37,12 @@ export default class NewsitemsWebPart extends BaseClientSideWebPart<INewsitemsWe
       pages: [
         {
           header: {
-            description: strings.PropertyPaneDescription
+            description: 'News webpart properties'
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: 'Basic properties',
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
-                }),
-                PropertyPaneTextField('title', {
-                  label: strings.TitleFieldLabel
-                }),
                 PropertyPaneTextField('listName', {
                   label: strings.LsitNameFieldLabel
                 }),

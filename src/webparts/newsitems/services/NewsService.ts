@@ -23,14 +23,15 @@ export class NewsService implements INewsService {
 
   public loadNewsItemsUsingPnPService(siteUrl: string, numberOfItems: number, listName: string) : Promise<INewsItem[]>{
     return pnp.sp.web.lists.getByTitle(listName)
-      .items.select('Title', 'Id', 'ImageUrl','Byline').
-      top(numberOfItems).
+      .items.select('Title', 'Id', 'ImageUrl','Byline','ProfileImageUrl', 'Author/Title')
+      .expand('Author/Title')
+      .top(numberOfItems).
       get();
   }
 
   public loadNewsItemsUsingService(siteUrl: string, numberOfItems: number, listName: string) : Promise<INewsItems>{
     return this.httpClient.get(
-      `${siteUrl}/_api/web/lists/getbytitle('${listName}')/items?$select=Title,Id,ImageUrl,Byline&$top=${numberOfItems}`,
+      `${siteUrl}/_api/web/lists/getbytitle('${listName}')/items?$select=Title,Id,ImageUrl,ProfileImageUrl,Byline,Author/Title&$expand=Author/Title&$top=${numberOfItems}`,
       {
         headers: {
             'Accept': 'application/json;odata=nometadata',

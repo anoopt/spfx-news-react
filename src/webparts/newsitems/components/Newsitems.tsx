@@ -9,6 +9,10 @@ import {
   Persona,
   PersonaSize,
   PersonaPresence,
+  DocumentCard,
+  DocumentCardPreview,
+  DocumentCardTitle,
+  DocumentCardActivity,
   Spinner
 } from 'office-ui-fabric-react';
 import { INewsItem } from '../interfaces/INewsItem'
@@ -98,17 +102,39 @@ export default class Newsitems extends React.Component<INewsitemsProps, INewsIte
     const newsItems: JSX.Element[] = this.state.newsItems.map((newsitem: INewsItem, i: number) => {
 
       return (
-        <Persona
-          primaryText={newsitem.Title}
-          secondaryText={newsitem.Byline}
-          imageUrl={newsitem.ImageUrl.Url}
-        />
+        //<Persona
+          //primaryText={newsitem.Title}
+          //secondaryText={newsitem.Byline}
+          //imageUrl={newsitem.ImageUrl.Url}
+        ///>
+
+         <DocumentCard key={newsitem.Id}>
+          <DocumentCardPreview
+            previewImages={[
+              {
+                previewImageSrc: newsitem.ImageUrl.Url,
+                width: 318,
+                height: 196,
+                accentColor: '#ce4b1f'
+              }
+            ]}
+            />
+          <DocumentCardTitle title={newsitem.Title} />
+          <DocumentCardActivity
+            activity={newsitem.Author.Title}
+            people={
+              [
+                { name: newsitem.Byline, profileImageSrc: newsitem.ProfileImageUrl.Url }
+              ]
+            }
+            />
+        </DocumentCard>
       );
     });
 
     return (
-      <div className={styles.workingWith}>
-        <div className={css('ms-font-xl', styles.webPartTitle)}>{this.props.title}</div>
+      <div className={styles.newsItems}>
+
         {loading}
         {error}
         {newsItems}
@@ -162,7 +188,7 @@ export default class Newsitems extends React.Component<INewsitemsProps, INewsIte
 
     if (currentEnvType == EnvironmentType.SharePoint || currentEnvType == EnvironmentType.ClassicSharePoint) {
 
-      this.props.httpClient.get(`${siteUrl}/_api/web/lists/getbytitle('${listName}')/items?$select=Title,Id,ImageUrl,Byline&$top=${numberOfPeople}`, {
+      this.props.httpClient.get(`${siteUrl}/_api/web/lists/getbytitle('${listName}')/items?$select=Title,Id,ImageUrl,ProfileImageUrl,Byline&$top=${numberOfPeople}`, {
           headers: {
             'Accept': 'application/json;odata=nometadata',
             'odata-version': ''
@@ -234,7 +260,9 @@ export default class Newsitems extends React.Component<INewsitemsProps, INewsIte
             Title: SearchUtils.getValueFromResults('Title', newsRow.Cells),
             Id: SearchUtils.getValueFromResults('Id', newsRow.Cells),
             ImageUrl: "",
-            Byline:""
+            Byline:"",
+            ProfileImageUrl: "",
+            Author: ""
           });
         }
 

@@ -3,4 +3,6 @@ export interface INewsItem {
   Title: string;
   ImageUrl: any;
   Byline: string;
+  ProfileImageUrl: any;
+  Author: any;
 }

@@ -13,8 +13,6 @@
     "description": { "default": "newsitems description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "News Items",
-      "title": "News Items",
       "numberOfItems": 1,
       "listName":"News"
     }

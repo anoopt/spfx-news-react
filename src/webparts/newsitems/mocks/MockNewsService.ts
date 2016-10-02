@@ -16,33 +16,57 @@ export class MockNewsService implements INewsService {
           Id: '1',
           Title: 'Mock News 1',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 1 from service'
+          Byline:'This is mock news 1 from service',
+          Author:{
+            Title:'Anoop'
+          }
         },
         {
           Id: '2',
           Title: 'Mock News 2',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 2 from service'
+          Byline:'This is mock news 2 from service',
+          Author:{
+            Title:'Anoop'
+          }
         },
         {
           Id: '3',
           Title: 'Mock News 3',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 3 from service'
+          Byline:'This is mock news 3 from service',
+          Author:{
+            Title:'Anoop'
+          }
         },
         {
           Id: '4',
           Title: 'Mock News 4',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 4 from service'
+          Byline:'This is mock news 4 from service',
+          Author:{
+            Title:'Anoop'
+          }
         }
       ]
       };
@@ -54,9 +78,15 @@ export class MockNewsService implements INewsService {
           Id: '1',
           Title: 'Mock News 1',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 1 from service'
+          Byline:'This is mock news 1 from service',
+          Author:{
+            Title:'Anoop'
+          }
         }
       ]
       };
@@ -78,33 +108,57 @@ export class MockNewsService implements INewsService {
           Id: '1',
           Title: 'Mock News 1',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 1 from service'
+          Byline:'This is mock news 1 from service',
+          Author:{
+            Title:'Anoop'
+          }
         },
         {
           Id: '2',
           Title: 'Mock News 2',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 2 from service'
+          Byline:'This is mock news 2 from service',
+          Author:{
+            Title:'Anoop'
+          }
         },
         {
           Id: '3',
           Title: 'Mock News 3',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 3 from service'
+          Byline:'This is mock news 3 from service',
+          Author:{
+            Title:'Anoop'
+          }
         },
         {
           Id: '4',
           Title: 'Mock News 4',
           ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 4 from service'
+          Byline:'This is mock news 4 from service',
+          Author:{
+            Title:'Anoop'
+          }
         }
       ]
       };
@@ -114,10 +168,16 @@ export class MockNewsService implements INewsService {
         {
           Id: '1',
           Title: 'Mock News 1',
-          ImageUrl: {
+         ImageUrl: {
+            Url: 'http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png'
+          },
+          ProfileImageUrl: {
             Url: 'http://www.stmichaelschurchwatersupton.org.uk/Location-News-icon.png'
           },
-          Byline:'This is mock news 1 from service'
+          Byline:'This is mock news 1 from service',
+          Author:{
+            Title:'Anoop'
+          }
         }
       ];
 

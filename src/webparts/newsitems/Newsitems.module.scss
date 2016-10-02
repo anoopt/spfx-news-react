@@ -1,7 +1,8 @@
-.workingWith {
+.newsItems {
   .webPartTitle {
     margin-bottom: 1em;
   }
+
 
   :global .ms-Spinner {
     width: 7em;
@@ -10,5 +11,10 @@
 
   :global .ms-Persona {
     cursor: pointer;
+  }
+
+  :global .ms-DocumentCard {
+    float: left;
+    margin: 0.5em;
   }
 }
