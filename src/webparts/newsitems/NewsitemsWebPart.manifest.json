@@ -9,9 +9,9 @@
   "preconfiguredEntries": [{
     "groupId": "74d41c88-e528-4d86-9ca5-658412c682dc",
     "group": { "default": "Under Development" },
-    "title": { "default": "newsitems" },
-    "description": { "default": "newsitems description" },
-    "officeFabricIconFontName": "Page",
+    "title": { "default": "News Items" },
+    "description": { "default": "Get News Items from News list" },
+    "officeFabricIconFontName": "News",
     "properties": {
       "numberOfItems": 1,
       "listName":"News"
