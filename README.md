@@ -1,5 +1,6 @@
 ## news-webpart-react
 
+Commit from From-Office branch.
 This is where you include your web part docs.
 
 ### Building the code
